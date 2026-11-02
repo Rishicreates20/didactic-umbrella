@@ -5,7 +5,7 @@ spring:
     virtual:
       enabled: true
   datasource:
-    url: ${VOICEFORGE_DB_URL:jdbc:postgresql://localhost:5432/voiceforge}
+    url: ${VOICEFORGE_DB_URL:jdbc:postgresql://localhost:5433/voiceforge}
     username: ${VOICEFORGE_DB_USER:voiceforge}
     password: ${VOICEFORGE_DB_PASSWORD:voiceforge}
   jpa:

@@ -23,7 +23,7 @@ ElevenLabs client, and the virtual-thread worker pool.
 Requires JDK 21 and Docker. Maven itself is not needed: the Maven wrapper downloads it on first run.
 
 ```bash
-docker compose up -d      # PostgreSQL, Redis, MinIO (S3 on :9000, console on :9001)
+docker compose up -d      # PostgreSQL on :5433, Redis, MinIO (S3 on :9000, console on :9001)
 ./mvnw spring-boot:run    # starts on :8080   (Windows: .\mvnw.cmd spring-boot:run)
 ./mvnw test               # unit tests        (Windows: .\mvnw.cmd test)
 ```
