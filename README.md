@@ -20,10 +20,12 @@ ElevenLabs client, and the virtual-thread worker pool.
 
 ## Running locally
 
+Requires JDK 21 and Docker. Maven itself is not needed: the Maven wrapper downloads it on first run.
+
 ```bash
 docker compose up -d      # PostgreSQL, Redis, MinIO (S3 on :9000, console on :9001)
-mvn spring-boot:run       # starts on :8080
-mvn test                  # unit tests
+./mvnw spring-boot:run    # starts on :8080   (Windows: .\mvnw.cmd spring-boot:run)
+./mvnw test               # unit tests        (Windows: .\mvnw.cmd test)
 ```
 
 Configuration is in `src/main/resources/application.yml`. Set `ELEVENLABS_API_KEY` to call
