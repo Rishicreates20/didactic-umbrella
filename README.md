@@ -13,7 +13,7 @@ Milestone 1 (scaffolding) is in place:
 - Linguistic chunker with a 250-character cap that never breaks words (FR-02)
 - Deterministic SHA-256 content key for the cache-aside layer (FR-04)
 - Actuator health and Prometheus metrics at `/actuator/prometheus`
-- `docker-compose.yml` for PostgreSQL 16, Redis 7.2 and MinIO
+- `docker-compose.yml` for PostgreSQL 16, Redis 7.2 and MinIO (via the `pgsty/minio` fork, since MinIO stopped publishing Docker Hub images)
 
 Next up: the job API (`POST /api/v1/jobs`), the Redis/S3 cache-aside layer, the resilient
 ElevenLabs client, and the virtual-thread worker pool.
@@ -21,7 +21,7 @@ ElevenLabs client, and the virtual-thread worker pool.
 ## Running locally
 
 ```bash
-docker compose up -d      # PostgreSQL, Redis, MinIO
+docker compose up -d      # PostgreSQL, Redis, MinIO (S3 on :9000, console on :9001)
 mvn spring-boot:run       # starts on :8080
 mvn test                  # unit tests
 ```
